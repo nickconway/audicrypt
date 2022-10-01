@@ -8,11 +8,19 @@
   },
   "package": {
     "productName": "audicrypt",
-    "version": "0.0.0"
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "all": true,
+      "shell": {
+          "all": true,
+          "scope": [{
+                "name": "run-py",
+                "cmd": "python3",
+                "args": ["/home/nick/audicrypt/src-tauri/src/manip.py", { "validator": "-[de]" }, { "validator": "\\S+" }, { "validator": "\\S+" }]
+          }]
+      }
     },
     "bundle": {
       "active": true,
@@ -29,7 +37,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.audicrypt",
       "longDescription": "",
       "macOS": {
         "entitlements": null,

@@ -14,35 +14,48 @@
   </head>
 
   <body>
-    <div class="container">
-      <h1>Welcome to Tauri!</h1>
 
-      <div class="row">
-        <a href="https://tauri.app" target="_blank">
-          <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-        >
-          <img
-            src="/assets/javascript.svg"
-            class="logo vanilla"
-            alt="JavaScript logo"
-          />
-        </a>
+      <div class="type">
+            <h1>Audicrypt</h1>
+
+          <div class="row">
+            <a href="https://audicrypt.tech" target="_blank">
+              <img src="/assets/logo.png" class="logo tauri" alt="Audicrypt logo" />
+            </a>
+          </div>
       </div>
 
-      <p>Click on the Tauri logo to learn more about the framework</p>
+      <div class="container">
+        <div class="encryption container">
+          <p class="type" onclick="toggle_type()"><span class="encryption selected">Encrypt</span> <span class="decryption">Decrypt</span></p>
 
-      <div class="row">
-        <div>
-          <input id="greet-input" placeholder="Enter a name..." />
-          <button type="button" onclick="greet()">Greet</button>
+          <div class="row">
+            <div>
+              <input id="encrypt-input" placeholder="Enter the text to encrypt" />
+              <button type="button" onclick="choose_file_encryption()">Choose File</button>
+            </div>
+          </div>
+          
+          <div class="row">
+              <button type="button" onclick="encrypt()">Encrypt</button>
+          </div>
+
+          <p id="encryption-msg"></p>
+        </div>
+
+        <div class="decryption container">
+          <div class="row">
+            <div>
+              <button type="button" onclick="choose_file_decryption()">Choose File</button>
+            </div>
+          </div>
+          
+          <div class="row">
+              <button type="button" onclick="decrypt()">Decrypt</button>
+          </div>
+
+          <p id="decryption-msg"></p>
         </div>
       </div>
-
-      <p id="greet-msg"></p>
-    </div>
   </body>
 </html>
