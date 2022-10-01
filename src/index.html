@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tauri App</title>
+        <script type="module" src="/main.js" defer></script>
+        <style>
+.logo.vanilla:hover {
+    filter: drop-shadow(0 0 2em #ffe21c);
+}
+        </style>
+    </head>
+
+    <body>
+        <canvas id="c"></canvas>
+        <div class="container">
+            <h1>Audicrypt</h1>
+
+            <div class="row">
+                <a href="https://audicrypt.tech" target="_blank">
+                    <img src="/assets/logo.png" class="logo tauri" alt="Audicrypt logo" />
+                </a>
+            </div>
+            <div class="row">
+                <button type="button" id="encrypt_header" class="header selected" onclick="show('encrypt')">Encrypt</button>
+                <button type="button" id="decrypt_header" class="header" onclick="show('decrypt')">Decrypt</button>
+                <span id="send_header" onclick="show('send')">Send</span>
+                <span id="receive_header" onclick="show('receive')">Receive</span>
+                </p>
+            </div>
+
+            <div id="encrypt_tab" class="container">
+
+                <div class="row">
+                    <div>
+                        <input id="encrypt-input" placeholder="Enter the text to encrypt" />
+                        <button type="button" onclick="choose_file_encryption()">Choose File</button>
+                    </div>
+                </div>
+
+                <div class="row padded">
+                    <button type="button" onclick="encrypt()">Encrypt</button>
+                </div>
+
+                <p id="encryption-msg"></p>
+                <p id="encryption-status"></p>
+            </div>
+
+            <div id="decrypt_tab" class="container">
+                <div class="row">
+                    <div>
+                        <button type="button" onclick="choose_file_decryption()">Choose File</button>
+                    </div>
+                </div>
+
+                <div class="row padded">
+                    <button type="button" onclick="decrypt()">Decrypt</button>
+                </div>
+
+                <p id="decryption-msg"></p>
+                <p id="decryption-status"></p>
+            </div>
+
+            <div id="send_tab" class="container">
+                <div class="row">
+                    <div>
+                        <button type="button" onclick="choose_file_decryption()">Choose File</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="receive_tab" class="container">
+                <div class="row">
+                    <div>
+                        <button type="button" onclick="choose_file_decryption()">Choose File</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
