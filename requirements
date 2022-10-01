@@ -1,0 +1,5 @@
+pydub: conda install pydub or pip install pydub
+ffmpeg: conda install ffmpeg or pip install ffmpeg 
+ffprobe: conda install ffprobe or pip install ffprobe
+pyaudio: conda install -c anaconda pyaudio or pip install pyaudio
+wave: pip install wave 
