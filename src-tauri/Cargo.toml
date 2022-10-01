@@ -1,6 +1,6 @@
 [package]
 name = "audicrypt"
-version = "0.1"
+version = "0.0.1"
 description = "Application for encryption and steganography with audio files"
 authors = ["you"]
 license = ""
