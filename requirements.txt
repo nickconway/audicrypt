@@ -3,4 +3,4 @@ ffmpeg==1.4
 ffprobe==0.5
 pyaudio==0.2.12
 wave==0.0.2
-cryptography==37.0.1
+cryptography==39.0.1
